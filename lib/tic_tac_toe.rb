@@ -15,4 +15,20 @@ def initialize(board = nil)
 end
 
 def display_board
-  
+  puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+  puts "-----------"
+  puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+  puts "-----------"
+  puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+end
+
+def input_to_index(input)
+  index=input.to_i - 1
+end
+
+def move(index, current_player)
+  @board[index]=current_player
+end
+
+def position_taken?(index)
+  (@)
