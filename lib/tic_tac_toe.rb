@@ -60,3 +60,18 @@ def turn_count
   turn_counter
 end
 
+def current_player
+  turn_counter = turn_count
+  turn_counter.even? current_player = "X" : current player = "O"
+  current_player
+end
+
+def won?
+  WIN_COMBINATIONS.find { |win_combo|
+    win_index_1 = win_combo[0]
+    win_index_2 = win_combo[1]
+    win_index_3 = win_combo[2]
+    
+    position_1 = @board[win_index_1]
+    position_2 = @board[win_index_2]
+    position_3 = @board[win_index_3]
