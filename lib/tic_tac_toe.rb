@@ -81,4 +81,33 @@ def won?
 end
 
 def full?
-  
+  @board.all{|location| (location =="X" || location=="O")}
+end
+
+def draw?
+  !won? && full?
+end
+
+def over?
+  draw? || won? || full?
+end
+
+def winner
+  if won?
+    index = won?[0]
+    @board[index]
+  end
+end
+
+def play
+  until over?
+  turn
+end
+  if won?
+    puts "Congratulations #{winner}!"
+  elsif draw?
+    puts "Cat's Game!"
+end
+end
+
+end
