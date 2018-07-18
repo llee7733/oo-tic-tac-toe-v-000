@@ -81,7 +81,8 @@ def won?
 end
 
 def full?
-  @board.all{|location| (location =="X" || location=="O")}
+  @board.include?("X" && "O") == true
+  @board.include?(" ") == false
 end
 
 def draw?
