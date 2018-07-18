@@ -60,10 +60,8 @@ def turn_count
   turn_counter
 end
 
-def current_player
-  turn_counter = turn_count
-  turn_counter.even? current_player = "X" : current player = "O"
-  current_player
+ def current_player
+   turn_count % 2 == 0 ? "X" : "O"
 end
 
 def won?
